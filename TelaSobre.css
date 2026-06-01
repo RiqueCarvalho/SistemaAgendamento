@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    min-height: 100vh;
+    font-family: 'Baloo 2', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.header {
+    background: #002c87;
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+}
+
+.logo img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.header h1 {
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.menu-btn:hover {
+    transform: scale(1.1);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -280px;
+
+    width: 280px;
+    height: 100vh;
+
+    background: #002c87;
+
+    transition: 0.4s;
+    z-index: 999;
+    padding-top: 120px;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 18px 25px;
+}
+
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.1fr;
+    gap: 20px;
+
+    padding: 20px;
+}
+
+.panel {
+    background: #ededed;
+    border: 4px solid #cfcfcf;
+    border-radius: 40px;
+
+    transition: 0.3s;
+}
+
+.panel:hover {
+    transform: translateY(-5px);
+}
+
+.tall-panel {
+    min-height: 650px;
+}
+
+.panel-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 40px;
+}
+
+.panel-header i {
+    font-size: 5rem;
+    margin-bottom: 15px;
+}
+
+.panel-header h2 {
+    font-size: 2.2rem;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.small-panel {
+    padding: 30px;
+}
+
+.small-panel h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.small-panel ul {
+    padding-left: 30px;
+}
+
+.small-panel li {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 30px;
+}
+
+.gov-logo {
+    text-align: right;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.gov-logo strong {
+    display: block;
+    font-size: 1rem;
+}
+
+@media(max-width:1000px) {
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .tall-panel {
+        min-height: 350px;
+    }
+}
